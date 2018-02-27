@@ -60,7 +60,7 @@ import java.awt.event.ActionListener;
 
           //Imagen de fondo
 
-          ((DesktopConFondo) dpnEscritorio).setImagen("/images/negro.jpg");
+          ((DesktopConFondo) dpnEscritorio).setImagen("/images/FondoA.jpg");
 
 
           //Haciendo menus
@@ -173,9 +173,9 @@ import java.awt.event.ActionListener;
         misClientes.show();
     }
     private void mnuArchivoProductosActionPerformed (ActionEvent e){
-            frmProductos misProductos = new frmProductos();
-            dpnEscritorio.add(misProductos);
-            misProductos.show();
+        frmProductos miProducto = new frmProductos();
+        dpnEscritorio.add(miProducto);
+        miProducto.show();
 
     }
     private void mnuArchivoUsuariosActionPerformed (ActionEvent e){

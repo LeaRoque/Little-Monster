@@ -24,7 +24,7 @@ public class frmLogin extends JFrame {
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Icon icoImagen = new ImageIcon(getClass().getResource("/images/abeja_white1.png"));
+        Icon icoImagen = new ImageIcon(getClass().getResource("/images/LITTLE_MONSTER_LOGO.png"));
 
         lblUsuario = new JLabel ("Usuario:");
         txtUsuario = new JTextField (10);
