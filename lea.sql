@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-02-2018 a las 22:02:23
+-- Tiempo de generación: 27-02-2018 a las 19:49:00
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `lea`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Producto`
+--
+
+CREATE TABLE `Producto` (
+  `IDProducto` varchar(11) NOT NULL,
+  `Descripcion` varchar(200) NOT NULL,
+  `Precio` int(11) NOT NULL,
+  `Notas` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `Producto`
+--
+
+INSERT INTO `Producto` (`IDProducto`, `Descripcion`, `Precio`, `Notas`) VALUES
+('Computer', 'IMac 27\"', 1600, 'Lorem ipsus hgbf yhbga ij eb gafacscscscs'),
+('Gafas', 'Gafas polalizadas marca Oakley', 345, 'Lorem ipsus hgbf yhbga ij eb gafacscscscs'),
+('id4', 'ede', 44, 'rrrr');
 
 -- --------------------------------------------------------
 
@@ -51,22 +73,28 @@ CREATE TABLE `Usuario` (
   `IDUsuario` varchar(10) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `Apellidos` varchar(50) NOT NULL,
-  `IDRol` int(11) NOT NULL,
-  `Clave` varchar(10) NOT NULL
+  `Clave` varchar(10) NOT NULL,
+  `IDRol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `Usuario`
 --
 
-INSERT INTO `Usuario` (`IDUsuario`, `Nombre`, `Apellidos`, `IDRol`, `Clave`) VALUES
-('jorge', '', '', 3, '1234'),
-('lea', 'Leandra', 'Roque', 1, '1234'),
-('pablo', 'Pablo', 'Roque', 2, '123');
+INSERT INTO `Usuario` (`IDUsuario`, `Nombre`, `Apellidos`, `Clave`, `IDRol`) VALUES
+('lea', 'Leandra', 'Roqué Pérez', '1234', 1),
+('MANU', 'MANU', 'PÉREZ', '123', 1),
+('Paco', 'Francisco', 'Alvarez', '123', 2);
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `Producto`
+--
+ALTER TABLE `Producto`
+  ADD PRIMARY KEY (`IDProducto`);
 
 --
 -- Indices de la tabla `Rol`
